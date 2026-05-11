@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+
+body {
+    background-color: #003049;
+    color: #fdf0d5;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.2rem;
+}
+header:hover {
+    cursor:default;;
+}
+
+main {
+    margin-top: 1%;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    height: 70vh;
+    background-color: #669bbc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game {
+    height : 65vmin;
+    width: 65vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height : 18.5vmin;
+    width: 18.5vmin;
+    margin: 1.4vmin;
+    background-color: #003049;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 10vmin;
+    color:#fdf0d5 ;
+    font-weight: 900;
+}
+.box:hover {
+    background-color:#001b29;
+    cursor:pointer;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vmin;
+}
+
+.winnerBox {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+    background-color: crimson;
+    color:#fdf0d5;
+    border: none;
+    border-radius: 0.5rem;
+}
+.winnerBox:hover {
+    background-color: #a50000;
+    cursor: default;
+}
+#reset {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin-top: 1.5%;
+    margin-bottom: 2%;
+    background-color: crimson;
+    color:#fdf0d5;
+    border: none;
+    border-radius: 0.5rem;
+}
+#reset:hover {
+    background-color: #a50000;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    .container {
+        height : 100vmin;
+        margin-top: 15px;
+    }
+    header {
+        margin-top: 30px;
+        font-size: 3vmin;
+    }
+    .winnerBox {
+        margin-top:30px;
+        padding: 2vmin 3vmin;
+        font-size: 4vmin;
+    }
+    #reset {
+        margin-top:30px;
+        padding: 2vmin 3vmin;
+        font-size: 4vmin;
+    }
+}
