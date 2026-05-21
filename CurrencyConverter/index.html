@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currency Converter</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+</head>
+<body>
+    <main>
+        <form class="container">
+            <!-- Heading -->
+            <div class="heading">
+                <h2>Currency Converter</h2>
+            </div>
+            <!-- Amount Section -->
+            <div class="amount-section">
+                <label for="amount">
+                    How much amount do you want to convert?
+                </label>
+                <input 
+                    type="number"
+                    id="amount"
+                    placeholder="Enter amount">
+            </div>
+            <!-- Currency Selection -->
+            <div class="from-to-section">
+                <!-- From Currency -->
+                <div class="currency">
+                    <label for="from">From</label>
+                    <!-- Country flag can be added here later -->
+                    <select name="from" id="from">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                        <option value="AUD">AUD</option>
+                    </select>
+                </div>
+                <!-- Exchange Icon -->
+                <div class="exchange-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <!-- To Currency -->
+                <div class="currency">
+                    <label for="to">To</label>
+                    <!-- Country flag can be added here later -->
+                    <select name="to" id="to">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                        <option value="AUD">AUD</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Exchange Rate Text -->
+            <div class="exchange-text">
+                <!-- Exchange rate will appear here -->
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="get-exchange-btn">
+                Get Exchange Rate
+            </button>
+            <!-- Result -->
+            <div class="result">
+                <!-- Converted amount will appear here -->
+            </div>
+        </form>
+    </main>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
