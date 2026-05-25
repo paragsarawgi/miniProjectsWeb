@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Project</title>
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home">
+        <div class="intro">Welcome to the Image Editor</div>
+        <button class="start-btn">Start Editing</button>
+    </div>
+
+    <main>
+        <section>
+            <div class="left">
+                <div class="top">
+                    <label for="choose-img" class="btn">
+                        Choose Image
+                        <svg class="icon icon-folder" width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M3 7a2 2 0 012-2h4l2 2h6a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+                        </svg>
+                        <input type="file" id="choose-img" accept="image/*" hidden>
+                    </label>
+                    <button class="btn" id="reset-btn" type="button" aria-label="Reset">
+                        Reset
+                        <svg class="icon icon-reset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                            <!-- Font Awesome reset icon (monochrome) -->
+                            <path fill="currentColor" d="M320 128C263.2 128 212.1 152.7 176.9 192L224 192C241.7 192 256 206.3 256 224C256 241.7 241.7 256 224 256L96 256C78.3 256 64 241.7 64 224L64 96C64 78.3 78.3 64 96 64C113.7 64 128 78.3 128 96L128 150.7C174.9 97.6 243.5 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C233 576 156.1 532.6 109.9 466.3C99.8 451.8 103.3 431.9 117.8 421.7C132.3 411.5 152.2 415.1 162.4 429.6C197.2 479.4 254.8 511.9 320 511.9C426 511.9 512 425.9 512 319.9C512 213.9 426 128 320 128z"/>
+                        </svg>
+                    </button>
+                    <button class="btn" id="download-btn" type="button" aria-label="Download">
+                        Download
+                        <svg class="icon icon-reset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 306.7L246.6 265.3C234.1 252.8 213.8 252.8 201.3 265.3C188.8 277.8 188.8 298.1 201.3 310.6L297.3 406.6C309.8 419.1 330.1 419.1 342.6 406.6L438.6 310.6C451.1 298.1 451.1 277.8 438.6 265.3C426.1 252.8 405.8 252.8 393.3 265.3L352 306.7L352 96zM160 384C124.7 384 96 412.7 96 448L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 448C544 412.7 515.3 384 480 384L433.1 384L376.5 440.6C345.3 471.8 294.6 471.8 263.4 440.6L206.9 384L160 384zM464 440C477.3 440 488 450.7 488 464C488 477.3 477.3 488 464 488C450.7 488 440 477.3 440 464C440 450.7 450.7 440 464 440z"/></svg>
+                    </button>
+                </div>
+                <div class="bottom">
+                    <div class="placeholder">
+                        <p>Click on Choose Image</p>
+                        <svg class="image-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M160 144C151.2 144 144 151.2 144 160L144 480C144 488.8 151.2 496 160 496L480 496C488.8 496 496 488.8 496 480L496 160C496 151.2 488.8 144 480 144L160 144zM96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM224 192C241.7 192 256 206.3 256 224C256 241.7 241.7 256 224 256C206.3 256 192 241.7 192 224C192 206.3 206.3 192 224 192zM360 264C368.5 264 376.4 268.5 380.7 275.8L460.7 411.8C465.1 419.2 465.1 428.4 460.8 435.9C456.5 443.4 448.6 448 440 448L200 448C191.1 448 182.8 443 178.7 435.1C174.6 427.2 175.2 417.6 180.3 410.3L236.3 330.3C240.8 323.9 248.1 320.1 256 320.1C263.9 320.1 271.2 323.9 275.7 330.3L292.9 354.9L339.4 275.9C343.7 268.6 351.6 264.1 360.1 264.1z"/></svg>
+                        
+                    </div>
+                    <canvas id="image-canvas" hidden></canvas>
+                </div>
+            </div>
+            <div class="right">
+                <h2>Image Editor</h2>
+                <div class="all-filters">
+                    <!-- more filters will be added by JS -->
+                    <div class="filter">
+                        <p>Brightness</p>
+                        <input name="brightness" type="range" min="0" max="200" value="100" unit="%">
+                    </div>
+                    <div class="filter">
+                        <p>Contrast</p>
+                        <input name="contrast" type="range" min="0" max="200" value="100" unit="%">
+                    </div>
+                    <div class="filter">
+                        <p>Saturation</p>
+                        <input name="saturation" type="range" min="0" max="200" value="100" unit="%">
+                    </div>
+                    <div class="filter">
+                        <p>Exposure</p>
+                        <input name="exposure" type="range" min="0" max="200" value="100" unit="%">
+                    </div>
+                    <div class="filter">
+                        <p>Hue Rotate</p>
+                        <input name="hueRotation" type="range" min="0" max="360" value="0" unit="deg">
+                    </div>
+                    <div class="filter">
+                        <p>Opacity</p>
+                        <input name="opacity" type="range" min="0" max="100" value="100" unit="%">
+                    </div>
+                    <div class="filter">
+                        <p>Blur</p>
+                        <input name="blur" type="range" min="0" max="20" value="0" unit="px">
+                    </div>
+                    <div class="filter">
+                        <p>Sepia</p>
+                        <input name="sepia" type="range" min="0" max="100" value="0" unit="%">
+                    </div>
+                    <div class="filter">
+                        <p>Invert</p>
+                        <input name="invert" type="range" min="0" max="100" value="0" unit="%">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+:root {
+    /* bg-colors */
+    --bg-primary:#400406;
+    /* text colors */
+    --black:#090C08;
+    /* --white:#F7F7F7; */
+    --white:beige;
+    /* spl colors */
+    --spl-hover: rgba(30,30,30);
+
+    /* font-family: */
+    --normal: 'system-ui', sans-serif;
+    /* font sizes */
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2.5rem;
+    --font-size-intro: 4rem;
+
+    /* border radius */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+    
+
+    /* padding */
+    --padding-sm: 0.5rem;
+    --padding-md: 1rem;
+    --padding-lg: 1.5rem;
+    --padding-xl: 2rem;
+    --padding-xxl: 3rem;
+
+    /* margins */
+    --margin-sm: 0.5rem;
+    --margin-md: 1rem;
+    --margin-lg: 1.5rem;
+    --margin-xl: 2rem;
+
+    /* gutter  or gap or spacing */
+    --gap-sm: 0.5rem;
+    --gap-md: 1rem;
+    --gap-lg: 1.5rem;
+    --gap-xl: 2rem;
+    --gap-xxl: 3rem;
+    --gap-xxxl: 4rem;
+
+    /* icon size */
+    --icon-size-sm: 1rem;
+    --icon-size-md: 1.5rem;
+    --icon-size-lg: 2rem;
+    --icon-size-xl: 3rem;
+    --icon-size-xxl: 4rem;
+    --icon-size-xxxl: 15rem;
+
+}
