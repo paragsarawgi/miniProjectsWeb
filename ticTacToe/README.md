@@ -38,12 +38,3 @@ This is a beginner-level learning project built for practice and understanding c
 - JavaScript
 
 <br>
-
-## 📸 Preview
-
-(Add screenshots here later)
-
-<br>
-
----
-Tiny game. Massive debugging. ☕🎯
